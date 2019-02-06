@@ -4,18 +4,17 @@ const util = require('util');     //util.inspect - Return a string representatio
 let swapiData = {};
 
 needle('get', 'https://swapi.co/api/people/5/')
-    .then( function(resp) {
+    .then( (resp) => {
         swapiData = resp.body;
         console.log(resp.statusCode);
         console.log(swapiData);
         console.log('the reading is finish');
     })
     .then(() => {
-        return fs.writeFile('swapiDataFile.txt', util.inspect(swapiData))
-            // .then ((err) => {
-            //     if (err) throw err;
-            //     // console.log('start writing in the file');
-            // })
+        return fs.writeFile('swapiDataFile1.txt', util.inspect(swapiData))
+                    .then (() => {
+                        console.log('writing is successful');
+                    })
                     .catch(function(err) {
                         console.log('Writing error!!!');
                     });
