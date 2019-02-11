@@ -4,22 +4,18 @@ const request = require('request');
 const util = require('util');
 
 const hashOfFile = function(urlInput, urlOutput) {
-    let streamInput = request(urlInput, 'utf-8');
-    let output = fs.createWriteStream(urlOutput);
-    const hashSum = crypto.createHash('sha1'); //'sha1' algorithm - consider using sha256
+    let streamInput = request(urlInput);
+    let hashSum = crypto.createHash('sha1'); //'sha1' algorithm - consider using sha256
 
-    streamInput.on('error', (err) => {
-        console.log("not found");
-        throw('File wasn`t found');
-    });
+    streamInput
+        .on('error', () => {
+            console.log("not found");
+            throw('File wasn`t found');
+        })
+        .pipe(fs.createWriteStream(urlOutput));
 
     hashSum.setEncoding('hex');
     streamInput.pipe(hashSum);
-    streamInput.pipe(output);
-    if (output.length === 0) {
-        console.log("not write");
-        throw('File wasn`t write');
-    }
 
     return new Promise((resolve, reject) => {
         hashSum.on('finish', () => {
