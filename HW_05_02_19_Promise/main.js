@@ -4,7 +4,6 @@ const util = require('util');     //util.inspect - Return a string representatio
 
 //get info from link
 needle('get', 'https://swapi.co/api/people/5/')
-    //set info in swapiData
     .then((resp) => {
         console.log('Start of reading');
         console.log(resp.statusCode);

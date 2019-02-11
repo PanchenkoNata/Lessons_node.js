@@ -12,6 +12,7 @@
   "author": "1",
   "license": "ISC",
   "dependencies": {
+    "crypto": "^1.0.1",
     "fs-extra": "^7.0.1",
     "needle": "^2.2.4"
   }
