@@ -9,6 +9,7 @@ const hashOfFile = function(urlInput, urlOutput) {
             throw('File wasn`t found');
         };
     });
+    
     let hashSum = crypto.createHash('sha1'); //'sha1' algorithm - consider using sha256
 
     streamInput

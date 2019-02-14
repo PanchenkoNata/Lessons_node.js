@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Write_Data</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <!-- <link rel="stylesheet" href="styles/main3.css"> -->
+</head>
+
+<body>
+    <div class="container">Hello</div>
+    <div class="data_container"></div>
+
+    <script>
+        // const fetch = require('node-fetch');
+
+        // fetch('https://panchenkonata.github.io/movedBlocks/')
+        //     .then((res) => {
+        //         return res.text();
+        //     })
+        //     .then((body) => {
+        //         console.log("fetch write")
+        //         document.write(body);
+        //     });
+
+        // const myInit = {
+        //     method: 'get'
+        // };
+
+        fetch('http://localhost:3000/routWithData')
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)// response from rout '/routWithData'
+        });
+    </script>
+</body>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Write_Data</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+</head>
+
+<body>
+    <div class="container">Hello</div>
+    <div class="data_container"></div>
+
+    <script>
+        //send request to url
+        fetch('http://localhost:3000/routWithData')
+        .then((res) => {
+            return res.json(); // response from route 'localhost:3000/routWithData'
+        })
+        .then((res) => {
+            console.log(res);
+        });
+    </script>
+</body>
