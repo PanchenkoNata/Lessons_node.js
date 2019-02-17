@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/stylesheets/page_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- LOGO -->
+            <img src=<%= urlLogo %> alt="LOGO">
+        </div>
+        <ul>
+            <li><a href="/page"><%= about %></a></li>
+            <li><a href="/page"><%= team %></a></li>
+            <li><a href="/page"><%= products %></a></li>
+        </ul>
+    </header>
+    <main>
+        <h1><%= header1 %></h1>
+    </main>
+    <footer>
+        <div class="contacts">
+            <p class="adress"><%= address %></p>
+            <a href=<%= tel %>><%= telFormat %></a>
+        </div>
+    </footer> 
+</body>
+</html>
