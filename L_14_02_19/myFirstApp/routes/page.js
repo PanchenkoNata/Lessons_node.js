@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
                products: 'Our Products',
                address: 'My address: Ukraine, Kyiv, str. Tolstogo, 1',
                tel: 'tel:+380501234567',
-               telFormat: '+38050 123 45 67'
+               telFormat: '+38050 123 45 96'
             })
 });
 

@@ -7,25 +7,15 @@
     <link rel="stylesheet" href="/stylesheets/page_style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <!-- LOGO -->
-            <img src=<%= urlLogo %> alt="LOGO">
-        </div>
-        <ul>
-            <li><a href="/page"><%= about %></a></li>
-            <li><a href="/page"><%= team %></a></li>
-            <li><a href="/page"><%= products %></a></li>
-        </ul>
-    </header>
+    <%# insert comments %>
+    <%# include template header.ejs %>
+    <%- include('./partials/header.ejs') %>
+    
     <main>
         <h1><%= header1 %></h1>
     </main>
-    <footer>
-        <div class="contacts">
-            <p class="adress"><%= address %></p>
-            <a href=<%= tel %>><%= telFormat %></a>
-        </div>
-    </footer> 
+
+    <%# include template footer.ejs %>
+    <%- include('partials/footer.ejs') %>
 </body>
 </html>
