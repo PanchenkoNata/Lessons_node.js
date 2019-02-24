@@ -8,8 +8,6 @@ const sassMiddleware = require('node-sass-middleware');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const pageRouter = require('./routes/page');
-const blogRouter = require('./routes/blog');
-const articlesRouter = require('./routes/articles');
 
 const app = express();
 
@@ -32,8 +30,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/page', pageRouter);
-app.use('/blog', blogRouter);
-app.use('/articles', articlesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,18 +42,9 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  // render the error page
   res.status(err.status || 500);
-  
-  if ( err.status === 500 ) {
-    res.render('error500');
-  } else if ( err.status === 510 ){
-    res.render('error510');
-  } else if ( err.status === 408 ) {
-    res.render('error408');
-  } else {
-    res.render('error');
-  }
-  
+  res.render('error');
 });
 
 module.exports = app;

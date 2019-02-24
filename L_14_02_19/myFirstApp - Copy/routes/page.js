@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
     res.render('page', 
             {
-               title: 'Article Page',
+               title: 'Rendered Page',
                urlLogo: '/images/logo_green.png',
                header1: 'Welcome to my page',
                about: 'About',
@@ -16,7 +16,4 @@ router.get('/', (req, res, next) => {
             })
 });
 
-// router.get('/blog/:id', (req, res, next) => {
-
-// });
 module.exports = router;
