@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="/stylesheets/page_style.css">
 </head>
 <body>
-    <%# comment --  insert comments %>
-    <%# comment --  include template header.ejs %>
+    <%# insert comments %>
+    <%# include template header.ejs %>
     <%- include('./partials/header.ejs') %>
     
     <main>
         <h1><%= header1 %></h1>
+        <p><%= articleText %></p>
+        <form method = "POST" action="/page">
+            <input type="text" name="txt">
+            <button type="submit">SEND</button>
+        </form>
     </main>
 
-    <%# comment -- include template footer.ejs %>
+    <%# include template footer.ejs %>
     <%- include('partials/footer.ejs') %>
 </body>
 </html>
