@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-
-
 router.all('/', (req, res, next) => {
    res.render('page', 
       {
@@ -17,12 +15,12 @@ router.all('/', (req, res, next) => {
          tel: 'tel:+380501234567',
          telFormat: '+38050 123 45 96'
       })
-   next();
+      next();
 });
 
 router.post('/', (req, res, next) => {
       req.body.txt;
-      res.send(' ');
-   });
+      console.log(req.body.txt);
+});
 
 module.exports = router;
