@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/stylesheets/page_style.css">
+</head>
+<body>
+    <%# insert comments %>
+    <%# include template header.ejs %>
+    <%- include('./partials/header.ejs') %>
+    
+    <main>
+        <h1><%= header1 %></h1>
+        <p><%= articleText %></p>
+        <form method = "POST" action="/page">
+            <input type="text" name="txt">
+            <button type="submit">SEND</button>
+        </form>
+    </main>
+
+    <%# include template footer.ejs %>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

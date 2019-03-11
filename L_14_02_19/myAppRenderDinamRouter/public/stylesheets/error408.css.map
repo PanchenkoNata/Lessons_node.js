@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,EAAE,EAAE,CAAC;EACH,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;CACjB;;AACD,AAAA,EAAE,CAAC;EACC,gBAAgB,EAAE,OAAO;CAC5B;;AAED,AAAA,EAAE,CAAC;EAEC,gBAAgB,EAAE,OAAO;CAC5B",
+    "sources": [
+        "error408.scss"
+    ],
+    "names": [],
+    "file": "error408.css"
+}
