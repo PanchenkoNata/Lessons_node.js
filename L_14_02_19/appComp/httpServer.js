@@ -60,12 +60,10 @@ const enableRoutes = () => {
 
 const modelUserProfile = require('./storage/db/models/userProfile');
 
-modelUserProfile.find({ name: 'Iren' })
-  .populate('fullName')
+modelUserProfile.findOne({ name: 'Iren' })
   .then((doc) => {
     console.log(`full name:   ${doc.fullName}`);
   });
-
 
 module.exports = app;
 module.exports.enableRoutes = enableRoutes;

@@ -20,19 +20,10 @@ const generalSchema = new Schema({
     minlength: 5,
     maxlength: 100,
   },
-},
-{
-  toObject: { virtuals: true },
-  toJSON: { virtuals: true },
 });
-generalSchema
-  .virtual('fullName', {
-    ref: 'userProfile',
-    localField: 'name',
-    foreignField: 'surname',
-    justOne: false,
 
-  })
+generalSchema
+  .virtual('fullName')
   .get(function () {
     return `${this.name} ${this.surname}`;
   });
