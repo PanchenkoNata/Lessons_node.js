@@ -60,9 +60,11 @@ const enableRoutes = () => {
 
 const modelUserProfile = require('./storage/db/models/userProfile');
 
-modelUserProfile.findOne({ name: 'Iren' })
+modelUserProfile.find({ })
   .then((doc) => {
-    console.log(`full name:   ${doc.fullName}`);
+    doc.forEach((item, i, doc) => {
+      console.log(item.fullName);
+    });
   });
 
 module.exports = app;
