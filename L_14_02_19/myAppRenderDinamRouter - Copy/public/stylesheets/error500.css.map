@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "error500.css",
-	"sources": [
-		"error500.scss"
-	],
-	"names": [],
-	"mappings": "AAAA,AAAA,EAAE,CAAC;EACC,UAAU,EAAE,MAAM;EAClB,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM,GACjB"
-}

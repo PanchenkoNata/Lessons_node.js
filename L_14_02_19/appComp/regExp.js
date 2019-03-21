@@ -1,7 +1,7 @@
-const str = 'http:regex101.com/';
-const reEmail = /\w+@\w+\.\w+/;
-const reNickName = /@.+/;
-const reUrl = /https?:\/\/\w+\.\w+./;
+const str = 'https://regex101.com/';
+const reEmail = /^\w+@\w+\.\w+\b/;
+const reNickName = /^@.+\b/;
+const reUrl = /^https?:\/\/\w+\.\w+.\b/;
 
 if (reEmail.exec(str) && str === reEmail.exec(str)[0]) {
   console.log('it is an e-mail');

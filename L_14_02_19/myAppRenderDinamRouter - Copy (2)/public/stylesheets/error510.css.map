@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,CAAC;EACC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,OAAO;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;CACjB",
-    "sources": [
-        "error510.scss"
-    ],
-    "names": [],
-    "file": "error510.css"
-}
