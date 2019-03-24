@@ -24,7 +24,6 @@ app.use((req, res, next) => {
     next();
     return;
   }
-
   next(createError(503));
 });
 
@@ -58,7 +57,7 @@ const enableRoutes = () => {
   isRoutesEnabled = true;
 };
 
-const modelUserProfile = require('./storage/db/models/userProfile');
+const modelUserProfile = require('./models/userProfile');
 
 modelUserProfile.find({ })
   .then((doc) => {
