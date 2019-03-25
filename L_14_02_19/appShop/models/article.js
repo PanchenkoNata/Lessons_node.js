@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const generalSchema = new Schema({
-  name: {
+  title: {
     type: Schema.Types.String,
   },
-  text: {
+  articleText: {
     type: Schema.Types.String,
   },
   tags: [{

@@ -5,9 +5,9 @@ const generalSchema = new Schema({
   name: {
     type: Schema.Types.String,
   },
-  tags: [{
+  article: [{
     articleTag: {
-      type: 'ObjectId',
+      type: Schema.Types.ObjectId,
       ref: 'artile',
     },
   }],

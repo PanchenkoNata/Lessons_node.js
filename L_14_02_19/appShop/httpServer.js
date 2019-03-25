@@ -57,14 +57,32 @@ const enableRoutes = () => {
   isRoutesEnabled = true;
 };
 
-const modelUserProfile = require('./models/userProfile');
+// const modelUserProfile = require('./models/userProfile');
+const modelProduct = require('./models/product');
+const modelCustomer = require('./models/customer');
+const modelArticle = require('./models/article');
+const modelTag = require('./models/tag');
+const modelOrder = require('./models/order');
 
-modelUserProfile.find({ })
+modelArticle.find({ title: 'Have a Question or Problem?' })
+  .populate('tag.name')
+  .exec()
+  // .populate('product')
+  // .exec((order) => {
+    // console.log(`Order's customer is:  ${order}`);
+  // })
   .then((doc) => {
-    doc.forEach((item, i, doc) => {
-      console.log(item.fullName);
-    });
+    console.log(doc);
   });
+
+
+// const model = require('./models/');
+// modelUserProfile.find({ })
+//   .then((doc) => {
+//     doc.forEach((item, i, doc) => {
+//       console.log(item.fullName);
+//     });
+//   });
 
 module.exports = app;
 module.exports.enableRoutes = enableRoutes;
