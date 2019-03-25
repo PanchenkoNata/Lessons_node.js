@@ -4,13 +4,6 @@ const express = require('express');
 
 // OK const { logger, express: expressLogger } = require('logger');
 
-// const indexRouter = require('httpRoutes/index');
-// const routesRouter = require('httpRoutes/routes');
-// const stationsRouter = require('httpRoutes/stations');
-// OK const mapRouter = require('httpRoutes/map');
-// OK const traficRouter = require('httpRoutes/trafic');
-
-
 const app = express();
 
 // OK app.use(expressLogger);
@@ -28,11 +21,6 @@ app.use((req, res, next) => {
 });
 
 // Routes prefix
-// app.use('/', indexRouter);
-// app.use('/routes', routesRouter);
-// app.use('/stations', stationsRouter);
-// app.use('/map', mapRouter);
-// app.use('/trafic', traficRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -42,7 +30,6 @@ app.use((req, res, next) => {
 // error handler. Don`t remove 'next' attribute
 app.use((err, req, res, next) => {
   // OK logger.warn(err);
-
   res.status(err.status || 500);
   res.end();
 });
@@ -53,36 +40,24 @@ const enableRoutes = () => {
     console.log('Routes already enabled');
     return;
   }
-
   isRoutesEnabled = true;
 };
 
-// const modelUserProfile = require('./models/userProfile');
 const modelProduct = require('./models/product');
 const modelCustomer = require('./models/customer');
 const modelArticle = require('./models/article');
 const modelTag = require('./models/tag');
 const modelOrder = require('./models/order');
 
-modelArticle.find({ title: 'Have a Question or Problem?' })
-  .populate('tag.name')
+modelOrder.find({  })
+  // .populate('orderCustomer')
+  .populate({ path: 'orderCustomer', select: 'name' })
+  .populate({ path: 'product', select: 'orderProduct' })
   .exec()
-  // .populate('product')
-  // .exec((order) => {
-    // console.log(`Order's customer is:  ${order}`);
-  // })
   .then((doc) => {
     console.log(doc);
   });
 
-
-// const model = require('./models/');
-// modelUserProfile.find({ })
-//   .then((doc) => {
-//     doc.forEach((item, i, doc) => {
-//       console.log(item.fullName);
-//     });
-//   });
 
 module.exports = app;
 module.exports.enableRoutes = enableRoutes;
