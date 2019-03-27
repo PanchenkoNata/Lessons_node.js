@@ -8,9 +8,10 @@ router.all('/', (req, res) => {
       title: '',
     });
 });
-// router.post('/', (req, res) => {
-//   const address = req.body.inputAddress;
-//   console.log(address);
-// });
+router.post('/', (req, res) => {
+  const address = req.body.inputAddress;
+  console.log(address);
+  console.log('hello from routeSearchAddress');
+});
 
 module.exports = router;

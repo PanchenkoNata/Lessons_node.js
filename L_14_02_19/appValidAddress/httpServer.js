@@ -6,7 +6,8 @@ const sassMiddleware = require('node-sass-middleware');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const routeSearchAddressRouter = require('./routes/routeSearchAddress');
-const testRouter = require('./routes/test');
+require('appValidAddress');
+// const testRouter = require('./routes/test');
 
 const app = express();
 
@@ -39,7 +40,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/searchAddress', routeSearchAddressRouter);
-app.use('/test', testRouter);
+// .next();
+// app.use('/test', testRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

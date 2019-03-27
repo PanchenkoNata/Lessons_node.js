@@ -5,6 +5,7 @@ require('config');
 const dbRunner = require('./runners/db');
 const webRunner = require('./runners/web');
 
+// set max amound of listeners who can be registered for any single event
 require('events').EventEmitter.defaultMaxListeners = Infinity;
 
 Promise.resolve()
