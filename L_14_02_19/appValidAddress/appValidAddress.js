@@ -1,5 +1,5 @@
 const googleMapsClient = require('@google/maps').createClient({
-  key: 'AIzaSyA_TIsrkrrQM0UxKn69d3VZKPAnlAtE8r0',
+  key: '',
   Promise: Promise,
 });
 
@@ -15,7 +15,7 @@ googleMapsClient.geocode({ address: insertAddress })
   });
 
 // const googleMapsClient = require('@google/maps').createClient({
-//   key: 'AIzaSyCJhyXQUy0Vr8YIQxzrVqnbG7C6QDBiQvE',
+//   key: '',
 // });
 // // const express = require('express');
 
@@ -33,4 +33,4 @@ googleMapsClient.geocode({ address: insertAddress })
 //   }
 // });
 
-// // https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Vict&types=geocode&language=en&key=AIzaSyCJhyXQUy0Vr8YIQxzrVqnbG7C6QDBiQvE
+// // https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Vict&types=geocode&language=en&key=
